@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.products-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.filter-component {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    background-color: #f1f1f186;
+}
+
+.products-filter {
+    padding: 10px;
+    width: 220px;
+    background-color: transparent;
+    background-color: #f1f1f186;
+    transition: 0.5s;
+}
+
+@media(max-width:806px) {
+    .products-filter {
+        position: absolute;
+        left: -100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+            0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.products-filter .sidebar h2 {
+    font-size: 20px;
+}
+
+.products-filter .sidebar ul {
+    margin-top: 20px;
+}
+
+.products-filter .sidebar ul li {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.products-filter .sidebar ul li:hover {
+    background-color: #e3e3e3;
+    transition: 0.5s;
+}
+
+.filter-component .products {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 10px;
+    width: 100%;
+    padding: 100px 20px 0 20px;
+    background-color: white;
+}
+
+.filter-component .filter-spans {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: #333;
+    transition: #333 0.3s ease;
+    font-weight: bold;
+    z-index: 100;
+}
+
+@media(max-width:806px) {
+    .filter-component .filter-spans {
+        position: absolute;
+        left: 0;
+        width: 80%;
+        top: 120px;
+        font-weight: bold;
+        z-index: 100;
+    }
+}
+
+@media(max-width:617px) {
+    .website-nav .search-container {
+        order: 2;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .website-nav .search-container input {
+        width: 90%;
+    }
+}
+
+.filter-component .filter-spans div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-component .filter-spans div span {
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #00000024;
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.filter-component .filter-spans div span span {
+    font-size: 18px;
+    font-weight: 400;
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0px;
+    margin-right: 5px;
+}
+
+.filter-component .filter-spans div span i {
+    font-size: 15px;
+}
+
+.price-filter h2 {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+    color: #333;
+}
+
+.price-filter input[type="number"] {
+    width: 80%;
+    padding: 7px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.price-filter button {
+    width: 80%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.price-filter button:hover {
+    background-color: #0056b3;
+}
+
+.price-filter span {
+    color: red;
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+.card {
+    position: relative;
+    margin-top: 1.5rem;
+    /* Equivalent to mt-6 */
+    /* width: 24rem; */
+    height: 420px;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(55, 55, 55, 0.36);
+    margin: 0px auto;
+}
+
+.card-header {
+    position: relative;
+    height: 14rem;
+    /* Keep h-56 equivalent */
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    /* blue-gray color */
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #4b5563;
+    /* lighter blue-gray */
+    overflow: hidden;
+    width: 100%;
+    /* Ensure it respects the card's width */
+}
+
+.card_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px;
+
+}
+
+/* .card_info span {
+    color: green;
+} */
+
+.stars-outer {
+    display: inline-block;
+    position: relative;
+    font-size: 24px;
+    color: #d3d3d3;
+    /* Color for empty stars */
+}
+
+.stars-outer::before {
+    content: "★★★★★";
+    /* Display 5 empty stars */
+}
+
+.stars-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    color: gold;
+    /* Color for filled stars */
+}
+
+.stars-inner::before {
+    content: "★★★★★";
+    /* Display 5 filled stars */
+}
+
+.card-footer {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 300px;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card-button {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background-color: #3b82f6;
+    /* blue color */
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.card-button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #00000024;
+    height: 0%;
+    width: 0%;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.card-button:hover::after {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+}
+
+.card-footer button {
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-footer button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #d9d9d924;
+    height: 0%;
+    width: 0%;
+    transition: 0.3s;
+    border-radius: 50px;
+}
+
+.card-footer button:hover::after {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+}
