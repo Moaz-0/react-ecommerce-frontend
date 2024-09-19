@@ -32,9 +32,9 @@ function WebsiteNavbar(props) {
             ></i>
             <div className="links-menu">
               <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/contact">Contact</Link>
-              <Link to="/about">About</Link>
+              <Link to="/all-products">All Products</Link>
+              <Link to="/contact-us">Contact</Link>
+              <Link to="/about-us">About</Link>
             </div>
             <div className="pages-links">
               <Link to="/all-products">All products</Link>
